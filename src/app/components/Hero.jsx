@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
@@ -19,8 +20,21 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF]">FASIH</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do Web Development, user <br className="sm:block hidden" />
-            interfaces Development and Quality Assurance
+            I
+            <Typewriter
+              words={[
+                "'m a Software Engineer.",
+                " do Web Development.",
+                " create Designs for websites.",
+                " do Quality Assurance.",
+              ]}
+              loop
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
           </p>
         </div>
       </div>
